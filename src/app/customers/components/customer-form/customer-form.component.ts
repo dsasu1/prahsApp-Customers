@@ -91,7 +91,7 @@ export class CustomerFormComponent implements OnInit, OnDestroy {
                 })),
               };
 
-              this.form.setValue(cust, { emitEvent: false });
+              this.form.setValue(cust);
             }
           },
         });
@@ -99,7 +99,6 @@ export class CustomerFormComponent implements OnInit, OnDestroy {
   }
 
   saveCustomer() {
-    console.log('his.form.value', this.form.value);
     if (this.form.valid) {
       let customer: Customer = {
         ...this.form.value,
